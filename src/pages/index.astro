@@ -45,7 +45,7 @@ const links: Link[] = [
   >
     <main class='w-[80%] flex flex-col gap-8'>
       <h1 class='text-6xl font-black text-center'>Neville Brem</h1>
-      <div class='grid grid-cols justify-center gap-4'>
+      <div class='grid justify-center gap-4'>
         {
           links.map(({ desc, link, icon }) => {
             return <Card {desc} {link} {icon} />;
@@ -58,6 +58,11 @@ const links: Link[] = [
         <Chip link='x.com/BremNeville' icon='fa-brands fa-x-twitter' />
         <Chip link='instagram.com/nevillebrem' icon='fa-brands fa-instagram' />
       </div>
+      <p class='prose text-white prose-a:text-white mx-auto'>
+        Or write me a mail at <a href='mailto:contact@nevillebrem.com'
+          >contact@nevillebrem.com</a
+        >
+      </p>
     </main>
   </body>
 </html>
