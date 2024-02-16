@@ -49,12 +49,18 @@ const links: Link[] = [
     <meta name='twitter:card' content='summary' />
     <meta name='twitter:site' content='@BremNeville' />
     <title>Links of Neville Brem</title>
+    <style>
+      @font-face {
+        font-family: Geist;
+        src: url(/Geist.ttf);
+      }
+    </style>
   </head>
   <body
-    class='bg-gradient-to-r from-gray-700 to-black text-white flex justify-center items-center w-screen h-screen'
+    class='bg-gradient-to-r from-gray-700 to-black text-white flex justify-center items-center w-screen h-screen font-[Geist]'
   >
     <main class='w-[80%] flex flex-col gap-8'>
-      <h1 class='text-6xl font-black text-center'>Neville Brem</h1>
+      <h1 class='md:text-6xl text-4xl font-black text-center'>Neville Brem</h1>
       <div class='grid justify-center gap-4'>
         {
           links.map(({ desc, link, icon }) => {
@@ -66,9 +72,8 @@ const links: Link[] = [
         <Chip link='youtube.com/@nevillebrem' icon='fa-brands fa-youtube' />
         <Chip link='github.com/nevthereal' icon='fa-brands fa-github' />
         <Chip link='x.com/BremNeville' icon='fa-brands fa-x-twitter' />
-        <Chip link='instagram.com/nevillebrem' icon='fa-brands fa-instagram' />
       </div>
-      <p class='prose text-white prose-a:text-white mx-auto'>
+      <p class='prose text-white prose-a:text-white text-center mx-auto'>
         Or write me a mail at <a href='mailto:contact@nevillebrem.com'
           >contact@nevillebrem.com</a
         >
