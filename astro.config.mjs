@@ -8,4 +8,5 @@ import db from "@astrojs/db";
 export default defineConfig({
   integrations: [tailwind(), db()],
   adapter: vercel(),
+  output: "server",
 });
