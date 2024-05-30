@@ -1,33 +1,9 @@
 ---
+import { db, Link } from "astro:db";
 import Card from "../components/card.astro";
 import Chip from "../components/chip.astro";
-const links: Link[] = [
-  {
-    desc: "Homepage",
-    link: "nevillebrem.com",
-    icon: "fa-solid fa-home",
-  },
-  {
-    desc: "Wolffe Bricks",
-    link: "wolffebricks.store",
-    icon: "fa-solid fa-store",
-  },
-  {
-    desc: "BarMates",
-    link: "barmates.netlify.app",
-    icon: "fa-solid fa-cookie",
-  },
-  {
-    desc: "Codoodle",
-    link: "codoodle.nevillebrem.com",
-    icon: "fa-solid fa-comments",
-  },
-  {
-    desc: "Photography",
-    link: "photography.nevillebrem.com",
-    icon: "fa-solid fa-camera-retro",
-  },
-];
+
+const links = await db.select().from(Link);
 ---
 
 <html lang='en'>
