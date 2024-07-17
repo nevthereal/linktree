@@ -1,9 +1,53 @@
 ---
-import { db, Link } from "astro:db";
 import Card from "../components/card.astro";
 import Chip from "../components/chip.astro";
-
-const links = await db.select().from(Link);
+interface Link {
+  title: string;
+  link: string;
+  icon: string;
+}
+const links: Link[] = [
+  {
+    title: "Homepage",
+    link: "https://nevillebrem.com",
+    icon: "fa-solid fa-home",
+  },
+  {
+    title: "Wolffe Bricks",
+    link: "https://wolffebricks.store",
+    icon: "fa-solid fa-store",
+  },
+  {
+    title: "BarMates",
+    link: "https://barmates.netlify.app",
+    icon: "fa-solid fa-cookie",
+  },
+  {
+    title: "Codoodle",
+    link: "https://codoodle.nevillebrem.com",
+    icon: "fa-solid fa-comments",
+  },
+  {
+    title: "Photography",
+    link: "https://photography.nevillebrem.com",
+    icon: "fa-solid fa-camera-retro",
+  },
+  {
+    title: "Sommerferienkurs",
+    link: "www.belvoir-rc.ch/sommerferienkurs.html",
+    icon: "fa-solid fa-medal",
+  },
+  {
+    title: "Gumroad",
+    link: "https://nevillebrem.gumroad.com/",
+    icon: "fa-solid fa-money-bill",
+  },
+  {
+    title: "GitHub Sponsoring",
+    link: "https://github.com/sponsors/nevthereal",
+    icon: "fa-solid fa-heart",
+  },
+];
 ---
 
 <html lang='en'>
@@ -45,8 +89,10 @@ const links = await db.select().from(Link);
       <h1 class='md:text-6xl text-4xl font-black text-center'>Neville Brem</h1>
       <div class='grid lg:grid-cols-2 gap-4 lg:max-w-[50vw] mx-auto'>
         {
-          links.map(({ desc, link, icon }) => {
-            return <Card {desc} {link} {icon} />;
+          links.map((link) => {
+            return (
+              <Card title={link.title} link={link.link} icon={link.icon} />
+            );
           })
         }
       </div>
