@@ -56,6 +56,7 @@ const links: Link[] = [
     <link rel='icon' type='image/x-icon' href='/favicon.png' />
     <meta name='viewport' content='width=device-width' />
     <script
+      is:inline
       src='https://kit.fontawesome.com/0c1fb969e1.js'
       crossorigin='anonymous'></script>
     <meta name='generator' content={Astro.generator} />
@@ -70,16 +71,9 @@ const links: Link[] = [
     <meta name='twitter:card' content='summary' />
     <meta name='twitter:site' content='@BremNeville' />
     <title>Links of Neville Brem</title>
-    <style>
-      @font-face {
-        font-family: Geist;
-        src: url(/Geist.ttf);
-        font-display: swap;
-      }
-    </style>
   </head>
   <body
-    class='bg-[#1e1e1e] flex justify-center items-center lg:h-screen w-screen font-[Geist] text-white'
+    class='bg-[#1e1e1e] flex justify-center items-center lg:h-screen w-screen text-white'
   >
     <main class='w-[80%] flex flex-col gap-8 my-8'>
       <h1 class='md:text-6xl text-4xl font-black text-center'>Neville Brem</h1>
