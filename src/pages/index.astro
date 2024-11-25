@@ -48,6 +48,8 @@ const links: Link[] = [
     icon: "fa-solid fa-heart",
   },
 ];
+
+const isProd = import.meta.env.PROD;
 ---
 
 <html lang="en">
@@ -60,10 +62,16 @@ const links: Link[] = [
       defer
       src="https://kit.fontawesome.com/0c1fb969e1.js"
       crossorigin="anonymous"></script>
-    <script
-      defer
-      src="https://analytics.nevillebrem.com/script.js"
-      data-website-id="c3662a4b-ef7b-4e92-b81d-66962366015c"></script>
+
+    {
+      isProd && (
+        <script
+          defer
+          src="https://analytics.nevillebrem.com/script.js"
+          data-website-id="c3662a4b-ef7b-4e92-b81d-66962366015c"
+        />
+      )
+    }
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Useful links of Neville Brem" />
     <meta name="author" content="Neville Brem" />
