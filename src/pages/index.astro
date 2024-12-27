@@ -37,16 +37,6 @@ const links: Link[] = [
     link: "https://photography.nevillebrem.com",
     icon: "fa-solid fa-camera-retro",
   },
-  {
-    title: "Gumroad",
-    link: "https://nevillebrem.gumroad.com/",
-    icon: "fa-solid fa-money-bill",
-  },
-  {
-    title: "GitHub Sponsoring",
-    link: "https://github.com/sponsors/nevthereal",
-    icon: "fa-solid fa-heart",
-  },
 ];
 
 const isProd = import.meta.env.PROD;
@@ -66,6 +56,7 @@ const isProd = import.meta.env.PROD;
     {
       isProd && (
         <script
+          is:inline
           defer
           src="https://analytics.nevillebrem.com/script.js"
           data-website-id="c3662a4b-ef7b-4e92-b81d-66962366015c"
@@ -89,8 +80,9 @@ const isProd = import.meta.env.PROD;
     class="bg-[#1e1e1e] flex justify-center items-center lg:h-screen w-screen text-white"
   >
     <main class="w-[80%] flex flex-col gap-8 my-8">
-      <h1 class="md:text-6xl text-4xl font-black text-center">Neville Brem</h1>
-      <div class="grid lg:grid-cols-2 gap-4 lg:max-w-[50vw] mx-auto">
+      <h1 class="text-6xl font-black text-center">Neville Brem</h1>
+      <p class="text-center">Hi, I'm Nev. This is the stuff I'm building rn</p>
+      <div class="grid md:grid-cols-2 gap-4 mx-auto">
         {
           links.map((link) => {
             return (

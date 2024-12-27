@@ -9,11 +9,11 @@ const { title, link, icon } = Astro.props;
 
 <a
   href={link}
-  target='_blank'
-  class='flex items-center bg-black/10 p-6 rounded-2xl border-white/10 border active:scale-95 duration-200 ease-in-out hover:brightness-200'
+  target="_blank"
+  class="flex items-center bg-black/10 p-6 rounded-2xl border-white/10 border active:scale-95 duration-200 ease-in-out hover:brightness-200 md:max-w-80"
 >
-  <div class='flex gap-4 justify-between'>
+  <div class="flex gap-4 justify-between">
     <i class={`${icon} text-xl my-auto`}></i>
-    <h1 class='font-extrabold text-xl mx-auto'>{title}</h1>
+    <h1 class="font-extrabold text-xl mx-auto">{title}</h1>
   </div>
 </a>
