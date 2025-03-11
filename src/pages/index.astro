@@ -20,7 +20,7 @@ const links: Link[] = [
   {
     title: "KM Challenge",
     link: "https://km-challenge.com",
-    icon: "fa-solid fa-cookie-bite",
+    icon: "fa-solid fa-person-running",
   },
   {
     title: "Codoodle",
@@ -81,7 +81,9 @@ const isProd = import.meta.env.PROD;
   >
     <main class="w-[80%] flex flex-col gap-8 my-8">
       <h1 class="text-6xl font-black text-center">Neville Brem</h1>
-      <p class="text-center">Hi, I'm Nev. This is the stuff I'm building rn</p>
+      <p class="text-center">
+        Hi, I'm Nev. Here's the stuff I'm currently busy with:
+      </p>
       <div class="grid md:grid-cols-2 gap-4 mx-auto">
         {
           links.map((link) => {
@@ -94,14 +96,22 @@ const isProd = import.meta.env.PROD;
       <div>
         <div class="flex justify-center gap-8 mb-4">
           <Chip link="youtube.com/@nevillebrem" icon="fa-brands fa-youtube" />
-          <Chip link="github.com/nevthereal" icon="fa-brands fa-github" />
           <Chip link="x.com/BremNeville" icon="fa-brands fa-x-twitter" />
+          <Chip link="github.com/nevthereal" icon="fa-brands fa-github" />
         </div>
-        <p class="text-center mx-auto">
-          Or write me a mail at <a
-            class="underline"
-            href="mailto:contact@nevillebrem.com">contact@nevillebrem.com</a
-          >
+        <p class="text-center mx-auto flex flex-col">
+          <span>
+            You can also reach out via <a
+              class="underline"
+              href="https://peerlist.io/nevillebrem">Peerlist</a
+            >
+          </span>
+          <span>
+            Or write me a mail at <a
+              class="underline"
+              href="mailto:contact@nevillebrem.com">contact@nevillebrem.com</a
+            >
+          </span>
         </p>
       </div>
       <p class="text-center font-semibold text-sm">© 2025 Neville Brem</p>
