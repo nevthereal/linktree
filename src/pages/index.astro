@@ -2,119 +2,136 @@
 import Card from "../components/card.astro";
 import Chip from "../components/chip.astro";
 interface Link {
-  title: string;
-  link: string;
-  icon: string;
+    title: string;
+    link: string;
+    icon: string;
 }
 const links: Link[] = [
-  {
-    title: "Homepage",
-    link: "https://nevillebrem.com",
-    icon: "fa-solid fa-home",
-  },
-  {
-    title: "Zenith",
-    link: "https://zenithproductivity.app",
-    icon: "fa-solid fa-calendar-days",
-  },
-  {
-    title: "KM Challenge",
-    link: "https://km-challenge.com",
-    icon: "fa-solid fa-person-running",
-  },
-  {
-    title: "Codoodle",
-    link: "https://codoodle.nevillebrem.com",
-    icon: "fa-solid fa-comments",
-  },
-  {
-    title: "Wolffe Bricks",
-    link: "https://wolffebricks.rocks",
-    icon: "fa-solid fa-store",
-  },
-  {
-    title: "Photography",
-    link: "https://photography.nevillebrem.com",
-    icon: "fa-solid fa-camera-retro",
-  },
+    {
+        title: "Homepage",
+        link: "https://nevillebrem.com",
+        icon: "fa-solid fa-home",
+    },
+    {
+        title: "Zenith",
+        link: "https://zenithproductivity.app",
+        icon: "fa-solid fa-calendar-days",
+    },
+    {
+        title: "KM Challenge",
+        link: "https://km-challenge.com",
+        icon: "fa-solid fa-person-running",
+    },
+    {
+        title: "Codoodle",
+        link: "https://codoodle.nevillebrem.com",
+        icon: "fa-solid fa-comments",
+    },
+    {
+        title: "Wolffe Bricks",
+        link: "https://wolffebricks.rocks",
+        icon: "fa-solid fa-store",
+    },
+    {
+        title: "Photography",
+        link: "https://photography.nevillebrem.com",
+        icon: "fa-solid fa-camera-retro",
+    },
 ];
 
 const isProd = import.meta.env.PROD;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <script
-      is:inline
-      defer
-      src="https://kit.fontawesome.com/0c1fb969e1.js"
-      crossorigin="anonymous"></script>
-
-    {
-      isProd && (
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
         <script
-          is:inline
-          defer
-          src="https://analytics.nevillebrem.com/script.js"
-          data-website-id="c3662a4b-ef7b-4e92-b81d-66962366015c"
-        />
-      )
-    }
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Useful links of Neville Brem" />
-    <meta name="author" content="Neville Brem" />
-    <meta property="og:title" content="Neville Brem" />
-    <meta property="og:image" content="banner.png" />
-    <meta property="og:description" content="Linktree of Neville Brem" />
-    <meta property="twitter:description" content="Linktree of Neville Brem" />
-    <meta property="twitter:title" content="Neville Brem" />
-    <meta property="twitter:image" content="banner.png" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@nevthereal" />
-    <title>Links of Neville Brem</title>
-  </head>
-  <body
-    class="bg-[#1e1e1e] flex justify-center items-center lg:h-screen w-screen text-white"
-  >
-    <main class="w-[80%] flex flex-col gap-8 my-8">
-      <h1 class="text-6xl font-black text-center">Neville Brem</h1>
-      <p class="text-center">
-        Hi, I'm Nev. Here's the stuff I'm currently busy with:
-      </p>
-      <div class="grid md:grid-cols-2 gap-4 mx-auto">
+            is:inline
+            defer
+            src="https://kit.fontawesome.com/0c1fb969e1.js"
+            crossorigin="anonymous"></script>
+
         {
-          links.map((link) => {
-            return (
-              <Card title={link.title} link={link.link} icon={link.icon} />
-            );
-          })
+            isProd && (
+                <script
+                    is:inline
+                    defer
+                    src="https://analytics.nevillebrem.com/script.js"
+                    data-website-id="c3662a4b-ef7b-4e92-b81d-66962366015c"
+                />
+            )
         }
-      </div>
-      <div>
-        <div class="flex justify-center gap-8 mb-4">
-          <Chip link="youtube.com/@nevillebrem" icon="fa-brands fa-youtube" />
-          <Chip link="x.com/nevthereal" icon="fa-brands fa-x-twitter" />
-          <Chip link="github.com/nevthereal" icon="fa-brands fa-github" />
-        </div>
-        <p class="text-center mx-auto flex flex-col">
-          <span>
-            You can also reach out via <a
-              class="underline"
-              href="https://peerlist.io/nevillebrem">Peerlist</a
-            >
-          </span>
-          <span>
-            Or write me a mail at <a
-              class="underline"
-              href="mailto:contact@nevillebrem.com">contact@nevillebrem.com</a
-            >
-          </span>
-        </p>
-      </div>
-      <p class="text-center font-semibold text-sm">© 2025 Neville Brem</p>
-    </main>
-  </body>
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Useful links of Neville Brem" />
+        <meta name="author" content="Neville Brem" />
+        <meta property="og:title" content="Neville Brem" />
+        <meta property="og:image" content="banner.png" />
+        <meta property="og:description" content="Linktree of Neville Brem" />
+        <meta
+            property="twitter:description"
+            content="Linktree of Neville Brem"
+        />
+        <meta property="twitter:title" content="Neville Brem" />
+        <meta property="twitter:image" content="banner.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@nevthereal" />
+        <title>Links of Neville Brem</title>
+    </head>
+    <body
+        class="bg-[#1e1e1e] flex justify-center items-center lg:h-screen w-screen text-white"
+    >
+        <main class="w-[80%] flex flex-col gap-8 my-8">
+            <h1 class="text-6xl font-black text-center">Neville Brem</h1>
+            <p class="text-center">
+                Hi, I'm Nev. Here's the stuff I'm currently busy with:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mx-auto">
+                {
+                    links.map((link) => {
+                        return (
+                            <Card
+                                title={link.title}
+                                link={link.link}
+                                icon={link.icon}
+                            />
+                        );
+                    })
+                }
+            </div>
+            <div>
+                <div class="flex justify-center gap-8 mb-4">
+                    <Chip
+                        link="youtube.com/@nevillebrem"
+                        icon="fa-brands fa-youtube"
+                    />
+                    <Chip
+                        link="x.com/nevthereal"
+                        icon="fa-brands fa-x-twitter"
+                    />
+                    <Chip
+                        link="github.com/nevthereal"
+                        icon="fa-brands fa-github"
+                    />
+                </div>
+                <p class="text-center mx-auto flex flex-col">
+                    <span>
+                        You can also reach out via <a
+                            class="underline"
+                            href="https://peerlist.io/nevillebrem">Peerlist</a
+                        >
+                    </span>
+                    <span>
+                        Or write me a mail at <a
+                            class="underline"
+                            href="mailto:contact@nevillebrem.com"
+                            >contact@nevillebrem.com</a
+                        >
+                    </span>
+                </p>
+            </div>
+            <p class="text-center font-semibold text-sm">© 2026 Neville Brem</p>
+        </main>
+    </body>
 </html>
